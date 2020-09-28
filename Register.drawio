@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T04:26:38.717Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="W89F0L6XaSpuRR39O7c3" version="13.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-09-28T04:27:41.491Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="-5VZsVTq3lvP9L9JgS4u" version="13.7.5" type="github" pages="2">
   <diagram name="Eureka" id="42789a77-a242-8287-6e28-9cd8cfd52e62">
     <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -203,7 +203,7 @@
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-0" />
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-1" parent="2pCgV1P5LcFLkyx0zvWh-0" />
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-3" value="init方法" style="swimlane;shadow=0;fontFamily=Helvetica;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="2pCgV1P5LcFLkyx0zvWh-1" vertex="1">
-          <mxGeometry x="60" width="890" height="1020" as="geometry" />
+          <mxGeometry x="80" width="890" height="1020" as="geometry" />
         </mxCell>
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-2" value="获取集群节点列表（集群or单机）" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-3" vertex="1">
           <mxGeometry x="70" y="90" width="120" height="60" as="geometry" />
@@ -235,6 +235,31 @@
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-30" value="重置这个follower的超时时间，&lt;br&gt;投票给发送这个给予投票请求的候选人&lt;br&gt;同时跟新这个本地term。" style="whiteSpace=wrap;html=1;shadow=0;align=left;" parent="2pCgV1P5LcFLkyx0zvWh-3" vertex="1">
           <mxGeometry x="440" y="640" width="170" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-26" value="本地term&amp;gt;候选term？" style="rhombus;whiteSpace=wrap;html=1;shadow=0;" parent="2pCgV1P5LcFLkyx0zvWh-3" vertex="1">
+          <mxGeometry x="420" y="470" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-28" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-3" source="2pCgV1P5LcFLkyx0zvWh-26" target="2pCgV1P5LcFLkyx0zvWh-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-29" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-28" vertex="1" connectable="0">
+          <mxGeometry x="0.3571" y="-9" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-31" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-3" source="2pCgV1P5LcFLkyx0zvWh-26" target="2pCgV1P5LcFLkyx0zvWh-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-32" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-31" vertex="1" connectable="0">
+          <mxGeometry x="-0.2356" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-27" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-3" source="2pCgV1P5LcFLkyx0zvWh-17" target="2pCgV1P5LcFLkyx0zvWh-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2pCgV1P5LcFLkyx0zvWh-16" value="任期+1是为了保证选取的唯一的leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-3" vertex="1">
+          <mxGeometry x="540" y="300" width="220" height="20" as="geometry" />
+        </mxCell>
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-4" value="&lt;h2 id=&quot;1.%20%E8%8E%B7%E5%8F%96Raft%E9%9B%86%E7%BE%A4%E8%8A%82%E7%82%B9&quot; style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 16px ; padding: 0px ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simhei&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;simsun&amp;#34; ; font-size: 24px ; color: rgb(79 , 79 , 79) ; line-height: 32px ; overflow-wrap: break-word ; background-color: rgb(255 , 255 , 255)&quot;&gt;Raft&lt;/h2&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-1" vertex="1">
           <mxGeometry x="55" y="30" width="70" height="60" as="geometry" />
         </mxCell>
@@ -260,31 +285,6 @@
           <mxGeometry x="590" y="370" width="200" height="70" as="geometry" />
         </mxCell>
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-15" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-1" source="2pCgV1P5LcFLkyx0zvWh-13" target="2pCgV1P5LcFLkyx0zvWh-14" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-16" value="任期+1是为了保证选取的唯一的leader" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-1" vertex="1">
-          <mxGeometry x="610" y="320" width="220" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-28" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-1" source="2pCgV1P5LcFLkyx0zvWh-26" target="2pCgV1P5LcFLkyx0zvWh-24" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-29" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-28" vertex="1" connectable="0">
-          <mxGeometry x="0.3571" y="-9" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-31" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-1" source="2pCgV1P5LcFLkyx0zvWh-26" target="2pCgV1P5LcFLkyx0zvWh-30" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-32" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" parent="2pCgV1P5LcFLkyx0zvWh-31" vertex="1" connectable="0">
-          <mxGeometry x="-0.2356" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-26" value="本地term&amp;gt;候选term？" style="rhombus;whiteSpace=wrap;html=1;shadow=0;" parent="2pCgV1P5LcFLkyx0zvWh-1" vertex="1">
-          <mxGeometry x="450" y="470" width="130" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="2pCgV1P5LcFLkyx0zvWh-27" value="" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-1" source="2pCgV1P5LcFLkyx0zvWh-17" target="2pCgV1P5LcFLkyx0zvWh-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="2pCgV1P5LcFLkyx0zvWh-35" style="edgeStyle=orthogonalEdgeStyle;curved=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;fontFamily=Helvetica;fillColor=#e1d5e7;" parent="2pCgV1P5LcFLkyx0zvWh-1" source="2pCgV1P5LcFLkyx0zvWh-30" target="2pCgV1P5LcFLkyx0zvWh-33" edge="1">
