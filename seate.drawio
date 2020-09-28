@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T14:12:01.626Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="mubzT26D6dAyjc-3CmzG" version="13.7.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-09-28T14:20:42.148Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="1TGtPf3IdT8g5-DY2vRt" version="13.7.5" type="github">
   <diagram id="4rBW8aGks8htioyzvY_S" name="Page-1">
     <mxGraphModel dx="1865" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -17,22 +17,103 @@
           <mxGeometry x="410" y="50" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="JWGcYRp4vTicQGSvjVex-9" value="seata流程" style="swimlane;" vertex="1" parent="1">
-          <mxGeometry x="155" y="260" width="705" height="970" as="geometry" />
+          <mxGeometry x="40" y="240" width="835" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-18" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-10" target="JWGcYRp4vTicQGSvjVex-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-19" value="2.返回一个XID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-18">
+          <mxGeometry x="-0.1021" y="-55" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-33" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-10" target="JWGcYRp4vTicQGSvjVex-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-34" value="5.执行所有分支事务的提交或者回滚" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-33">
+          <mxGeometry x="0.0626" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="JWGcYRp4vTicQGSvjVex-10" value="TC" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
           <mxGeometry x="495" y="120" width="135" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="JWGcYRp4vTicQGSvjVex-13" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
-          <mxGeometry x="35" y="295" width="120" height="60" as="geometry" />
+        <mxCell id="JWGcYRp4vTicQGSvjVex-20" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-11" target="JWGcYRp4vTicQGSvjVex-10">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JWGcYRp4vTicQGSvjVex-12" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
-          <mxGeometry x="25" y="250" width="120" height="60" as="geometry" />
+        <mxCell id="JWGcYRp4vTicQGSvjVex-21" value="3将这个本地事务注册为XID的全局事务&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;的一个分支&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-20">
+          <mxGeometry x="-0.4112" y="-26" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="JWGcYRp4vTicQGSvjVex-11" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
-          <mxGeometry x="25" y="210" width="120" height="60" as="geometry" />
+        <mxCell id="JWGcYRp4vTicQGSvjVex-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-14" target="JWGcYRp4vTicQGSvjVex-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="120" />
+              <mxPoint x="405" y="290" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="JWGcYRp4vTicQGSvjVex-14" value="TM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
-          <mxGeometry x="45" y="80" width="120" height="60" as="geometry" />
+        <mxCell id="JWGcYRp4vTicQGSvjVex-17" value="1.开启全局事务请求" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-15">
+          <mxGeometry x="-0.3532" y="-22" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-25" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.467;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-22" target="JWGcYRp4vTicQGSvjVex-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-22" value="微服务链路" style="swimlane;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="10" y="40" width="210" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-14" value="TM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-22">
+          <mxGeometry x="12.5" y="40" width="175" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-12" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-22">
+          <mxGeometry x="12.5" y="140" width="75" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-11" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-22">
+          <mxGeometry x="90" y="140" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-23" value="微服务链路" style="swimlane;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="20" y="360" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-13" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-23">
+          <mxGeometry y="70" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-24" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-23">
+          <mxGeometry x="90" y="70" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-24" target="JWGcYRp4vTicQGSvjVex-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="338" y="455" />
+              <mxPoint x="338" y="480" />
+              <mxPoint x="495" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-27" value="3将这个本地事务注册为XID的全局事务&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;的一个分支&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-26">
+          <mxGeometry x="-0.2937" y="-6" relative="1" as="geometry">
+            <mxPoint x="53" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-29" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="JWGcYRp4vTicQGSvjVex-9" source="JWGcYRp4vTicQGSvjVex-28" target="JWGcYRp4vTicQGSvjVex-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-30" value="4.通知事务是提交还是回滚" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="JWGcYRp4vTicQGSvjVex-29">
+          <mxGeometry x="-0.3274" y="18" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-28" value="TM" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="130" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-32" value="RM" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="420" y="700" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
