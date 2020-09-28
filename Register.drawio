@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T07:53:18.906Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="XY-csv0lBQHw60lQijsH" version="13.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-09-28T10:09:35.149Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="6KKmG2klKJprLEDniy7v" version="13.7.5" type="github" pages="3">
   <diagram name="Eureka" id="42789a77-a242-8287-6e28-9cd8cfd52e62">
     <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -375,6 +375,105 @@
       <root>
         <mxCell id="YiJMnF56RPMD7wd5EbZs-0" />
         <mxCell id="YiJMnF56RPMD7wd5EbZs-1" parent="YiJMnF56RPMD7wd5EbZs-0" />
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-3" value="&lt;font style=&quot;font-size: 16px&quot;&gt;在选举，serverid越大权重越大&lt;br&gt;&lt;br&gt;zookeeper通过复制leader的数据到follower实现高可用，确保在leader节点的树内容至少有一般以上的机器都有&lt;br&gt;&lt;br&gt;zxid:服务器存放的最大数据的id，id越大，说明数据越新&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;h3 style=&quot;margin: 10px 0px ; padding: 0px ; line-height: 1.5 ; font-family: &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;verdana&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; background-color: rgba(255 , 255 , 255 , 0.5) ; font-size: 16px&quot;&gt;&lt;font style=&quot;font-weight: normal ; font-size: 16px&quot;&gt;最新的事物ID 既 LastLoggedZxid&lt;/font&gt;&lt;/h3&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;gradientColor=none;align=left;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="20" y="40" width="460" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-5" value="zookeeper读机制" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="30" y="400" width="640" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry x="10" y="90" width="600" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry x="10" y="290" width="600" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry x="20" y="190" width="600" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-12" value="clientB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry x="230" y="310" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-13" value="" style="endArrow=classic;html=1;entryX=0.149;entryY=0.425;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5" target="SAMm_WZ2sFC5QimjHP4S-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="100" as="sourcePoint" />
+            <mxPoint x="100" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-15" value="" style="endArrow=classic;html=1;entryX=0.275;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.169;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5" source="SAMm_WZ2sFC5QimjHP4S-8" target="SAMm_WZ2sFC5QimjHP4S-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="110" as="sourcePoint" />
+            <mxPoint x="119.40000000000009" y="203.4000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-17" value="" style="endArrow=classic;html=1;entryX=0.275;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.169;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140.00000000000009" y="298" as="sourcePoint" />
+            <mxPoint x="193.6" y="194.79999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-19" value="" style="endArrow=classic;html=1;entryX=0.149;entryY=0.425;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="198" as="sourcePoint" />
+            <mxPoint x="249.4000000000001" y="291.4000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-21" value="" style="endArrow=classic;html=1;entryX=0.275;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.169;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="298" as="sourcePoint" />
+            <mxPoint x="353.5999999999999" y="194.79999999999995" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-24" value="" style="endArrow=classic;html=1;entryX=0.149;entryY=0.425;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="196.60000000000002" as="sourcePoint" />
+            <mxPoint x="419.4000000000001" y="290.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-27" value="" style="endArrow=classic;html=1;entryX=0.149;entryY=0.425;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="98" as="sourcePoint" />
+            <mxPoint x="469.4000000000001" y="191.4000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-29" value="" style="endArrow=classic;html=1;entryX=0.275;entryY=0.325;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.169;exitY=0.725;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="SAMm_WZ2sFC5QimjHP4S-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490.0000000000001" y="193.19999999999993" as="sourcePoint" />
+            <mxPoint x="543.6" y="89.99999999999989" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-6" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="160" y="250" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-10" value="zookeeper" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="245" y="600" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-11" value="clientA" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="245" y="440" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-14" value="set(/a,version01)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="15" y="530" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-16" value="跟新版本为02" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="155" y="530" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-18" value="获取版本" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="180" y="640" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-20" value="返回版本为02" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="225" y="640" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-22" value="set(/b,version=02)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="315" y="650" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-25" value="返回版本为03" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="395" y="640" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-28" value="set（/c,version=02）" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="345" y="530" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-30" value="版本不对，设置失败" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
+          <mxGeometry x="500" y="540" width="120" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
