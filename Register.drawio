@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T11:55:03.589Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="axx6Qhjls69Ccc6k6ZjD" version="13.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-09-28T12:15:42.133Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="73CGbJdSq5V0AZZA742G" version="13.7.5" type="github" pages="3">
   <diagram name="Eureka" id="42789a77-a242-8287-6e28-9cd8cfd52e62">
     <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -371,7 +371,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hHVL1fWL3Su4tsb3WITc" name="zookeeper">
-    <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1221" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="YiJMnF56RPMD7wd5EbZs-0" />
         <mxCell id="YiJMnF56RPMD7wd5EbZs-1" parent="YiJMnF56RPMD7wd5EbZs-0" />
@@ -486,7 +486,7 @@
           <mxGeometry x="10" y="960" width="550" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-36" value="Zookeeper的核心是原子广播机制（zab）" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
-          <mxGeometry x="80" y="1070" width="1220" height="1500" as="geometry" />
+          <mxGeometry x="100" y="1070" width="1290" height="2580" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-37" value="广播模式" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" collapsed="1" parent="SAMm_WZ2sFC5QimjHP4S-36">
           <mxGeometry x="73" y="160" width="80" height="23" as="geometry">
@@ -637,19 +637,31 @@
           <mxGeometry x="640" y="210" width="280" height="375" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-94" value="数据同步的方式" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-36">
-          <mxGeometry x="300" y="1050" width="660" height="402" as="geometry" />
+          <mxGeometry x="160" y="1020" width="880" height="1120" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-95" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
-          <mxGeometry x="50" y="102" width="550" height="8" as="geometry" />
+          <mxGeometry x="54" y="308" width="550" height="8" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-96" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;minCommittedLog&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
-          <mxGeometry x="10" y="70" width="180" height="20" as="geometry" />
+          <mxGeometry x="34" y="276" width="180" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-97" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;peerLastZxid&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
-          <mxGeometry x="260" y="70" width="130" height="20" as="geometry" />
+          <mxGeometry x="269" y="220" width="130" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-98" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;maxCommittedLog&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
-          <mxGeometry x="470" y="70" width="180" height="20" as="geometry" />
+          <mxGeometry x="447" y="276" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-100" value="&lt;ul style=&quot;box-sizing: border-box ; outline: 0px ; margin: 0px 0px 24px ; padding: 0px ; list-style: none ; font-size: 15px ; overflow-wrap: break-word ; color: rgba(0 , 0 , 0 , 0.75) ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;li style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 0px 32px ; padding: 0px ; list-style: disc ; overflow-wrap: break-word&quot;&gt;&lt;p style=&quot;box-sizing: border-box ; outline: 0px ; margin: 0px 0px 16px ; padding: 0px ; color: rgb(77 , 77 , 77) ; line-height: 26px ; overflow-wrap: break-word&quot;&gt;&lt;mark style=&quot;font-family: &amp;#34;courier std&amp;#34; ; box-sizing: border-box ; outline: 0px ; background-color: rgb(248 , 248 , 64) ; overflow-wrap: break-word&quot;&gt;peerLastZxid&lt;/mark&gt;&lt;span style=&quot;font-family: &amp;#34;courier std&amp;#34;&quot;&gt;：该Learner服务器最后处理的ZXID。&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 0px 32px ; padding: 0px ; list-style: disc ; overflow-wrap: break-word&quot;&gt;&lt;p style=&quot;box-sizing: border-box ; outline: 0px ; margin: 0px 0px 16px ; padding: 0px ; color: rgb(77 , 77 , 77) ; line-height: 26px ; overflow-wrap: break-word&quot;&gt;&lt;font face=&quot;Courier Std&quot; style=&quot;box-sizing: border-box ; outline: 0px ; overflow-wrap: break-word&quot;&gt;&lt;mark style=&quot;box-sizing: border-box ; outline: 0px ; background-color: rgb(248 , 248 , 64) ; overflow-wrap: break-word&quot;&gt;minCommittedLog&lt;/mark&gt;：Leader服务器提议缓存队列committedLog中的最下ZXID。&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 0px 32px ; padding: 0px ; list-style: disc ; overflow-wrap: break-word&quot;&gt;&lt;p style=&quot;box-sizing: border-box ; outline: 0px ; margin: 0px 0px 16px ; padding: 0px ; color: rgb(77 , 77 , 77) ; line-height: 26px ; overflow-wrap: break-word&quot;&gt;&lt;font face=&quot;Courier Std&quot; style=&quot;box-sizing: border-box ; outline: 0px ; overflow-wrap: break-word&quot;&gt;&lt;mark style=&quot;box-sizing: border-box ; outline: 0px ; background-color: rgb(248 , 248 , 64) ; overflow-wrap: break-word&quot;&gt;maxCommittedLog&lt;/mark&gt;：Leader服务器提议缓存队列committedLog中的最大ZXID。&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="34" y="50" width="600" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-102" value="&lt;font style=&quot;font-size: 16px&quot;&gt;同步过程（diff同步），其他策略大同小异&lt;br&gt;learner接受投票包和提交的指令包&lt;br&gt;将leaner放入到forwardingfollwer或者observerfollower&lt;br&gt;learner接受diff指令，并加载数据包到自己的内存中，之后返回ack给leader&lt;br&gt;leader在过半策略后会想learner发送&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;UPTODAT指令，表示现在可以提供learner可以提供对外服务了&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=none;gradientColor=none;align=left;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="110" y="712" width="560" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-103" value="&lt;font style=&quot;font-size: 16px&quot;&gt;同步策略：&lt;br&gt;&lt;h3 style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 16px ; padding: 0px ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simhei&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;simsun&amp;#34; ; font-size: 22px ; color: rgb(79 , 79 , 79) ; line-height: 30px ; overflow-wrap: break-word ; background-color: rgb(255 , 255 , 255)&quot;&gt;1.直接差异化同步（DIFF同步）&lt;/h3&gt;&lt;div&gt;peerLastZxid介于两者之间&lt;/div&gt;&lt;div&gt;&lt;h3 style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 16px ; padding: 0px ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simhei&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;simsun&amp;#34; ; font-size: 22px ; color: rgb(79 , 79 , 79) ; line-height: 30px ; overflow-wrap: break-word ; background-color: rgb(255 , 255 , 255)&quot;&gt;2.先回滚再差异化同步化（TRUNC + DIFF同步）&lt;/h3&gt;&lt;/div&gt;&lt;div&gt;&lt;h3 style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 16px ; padding: 0px ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simhei&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;simsun&amp;#34; ; font-size: 22px ; color: rgb(79 , 79 , 79) ; line-height: 30px ; overflow-wrap: break-word ; background-color: rgb(255 , 255 , 255)&quot;&gt;3.进回滚同步（TRUNC同步）&lt;/h3&gt;&lt;/div&gt;&lt;div&gt;&lt;h3 style=&quot;box-sizing: border-box ; outline: 0px ; margin: 8px 0px 16px ; padding: 0px ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simhei&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;simsun&amp;#34; ; font-size: 22px ; color: rgb(79 , 79 , 79) ; line-height: 30px ; overflow-wrap: break-word ; background-color: rgb(255 , 255 , 255)&quot;&gt;4.全量同步（SNAP同步）&lt;/h3&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=none;gradientColor=none;align=left;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="95" y="360" width="590" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-104" value="https://blog.csdn.net/en_joker/article/details/79422582" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="20" y="1080" width="300" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-38" value="&lt;font style=&quot;font-size: 16px&quot;&gt;zab有恢复模式和广播模式&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
           <mxGeometry x="80" y="1110" width="200" height="20" as="geometry" />
