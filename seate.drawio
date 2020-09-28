@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T13:58:16.384Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" version="13.7.5" etag="LSDg1NnfPNFDRHadePQf" type="github"><diagram id="4rBW8aGks8htioyzvY_S">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-09-28T14:12:01.626Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="mubzT26D6dAyjc-3CmzG" version="13.7.5" type="github">
+  <diagram id="4rBW8aGks8htioyzvY_S" name="Page-1">
+    <mxGraphModel dx="1865" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JWGcYRp4vTicQGSvjVex-1" value="seata组件" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="-20" y="10" width="630" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-5" value="TC事务协调器&lt;br&gt;&lt;span&gt;维护全局和分支事务的状态，执行提交和回滚&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-1">
+          <mxGeometry x="50" y="50" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-7" value="TM事务管理器&lt;br&gt;&lt;span&gt;开启全局事务，定义全局事务的范围，提交或者回滚&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-1">
+          <mxGeometry x="240" y="55" width="135" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-8" value="RM资源管理器&lt;br&gt;管理分支事务处理的资源，和TC进行通信以注册分支事务和报告分支事务的状态，并驱动分支事务提交或者回滚" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-1">
+          <mxGeometry x="410" y="50" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-9" value="seata流程" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="155" y="260" width="705" height="970" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-10" value="TC" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="495" y="120" width="135" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-13" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="35" y="295" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-12" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="25" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-11" value="RM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="25" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JWGcYRp4vTicQGSvjVex-14" value="TM" style="whiteSpace=wrap;html=1;" vertex="1" parent="JWGcYRp4vTicQGSvjVex-9">
+          <mxGeometry x="45" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
