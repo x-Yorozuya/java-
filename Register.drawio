@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-28T11:27:43.062Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="Q10FntFPLw7f5HAlwaVd" version="13.7.5" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2020-09-28T11:55:03.589Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="axx6Qhjls69Ccc6k6ZjD" version="13.7.5" type="github" pages="3">
   <diagram name="Eureka" id="42789a77-a242-8287-6e28-9cd8cfd52e62">
     <mxGraphModel dx="1038" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -486,7 +486,7 @@
           <mxGeometry x="10" y="960" width="550" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-36" value="Zookeeper的核心是原子广播机制（zab）" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
-          <mxGeometry x="80" y="1070" width="1220" height="1330" as="geometry" />
+          <mxGeometry x="80" y="1070" width="1220" height="1500" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-37" value="广播模式" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" collapsed="1" parent="SAMm_WZ2sFC5QimjHP4S-36">
           <mxGeometry x="73" y="160" width="80" height="23" as="geometry">
@@ -635,6 +635,21 @@
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-93" value="&lt;span style=&quot;font-size: 15px&quot;&gt;leader自己接受到了p1,p2,p3&lt;br&gt;&lt;br&gt;但是leader发送了p1后就宕机了，所有两个follower有p1的信息&lt;br&gt;&lt;br&gt;重新选取leader，server02为leader，并且也发送了p2信息&lt;br&gt;这是leader（server02），而server01重新变为leader，继续执行之前的未执行的p2&lt;br&gt;&lt;br&gt;而因为server02本来就有了p2，就比较epoch位，比较大的执行，小的抛弃，所以leader发送的p2被抛弃了，而p2也是因为epoch不同也被抛弃了&lt;br&gt;&lt;br&gt;如果没有epoch位的话，就会如下：&lt;br&gt;p2执行了server01的命令，再执行p3的时候因为没有父节点而报错&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=none;gradientColor=none;align=left;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-79">
           <mxGeometry x="640" y="210" width="280" height="375" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-94" value="数据同步的方式" style="swimlane;fillColor=none;gradientColor=none;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-36">
+          <mxGeometry x="300" y="1050" width="660" height="402" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-95" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="50" y="102" width="550" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-96" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;minCommittedLog&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="10" y="70" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-97" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;peerLastZxid&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="260" y="70" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SAMm_WZ2sFC5QimjHP4S-98" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: &amp;#34;courier std&amp;#34; ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;maxCommittedLog&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="SAMm_WZ2sFC5QimjHP4S-94">
+          <mxGeometry x="470" y="70" width="180" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SAMm_WZ2sFC5QimjHP4S-38" value="&lt;font style=&quot;font-size: 16px&quot;&gt;zab有恢复模式和广播模式&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="YiJMnF56RPMD7wd5EbZs-1">
           <mxGeometry x="80" y="1110" width="200" height="20" as="geometry" />
