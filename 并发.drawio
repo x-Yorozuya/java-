@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-30T03:26:52.644Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="-gCIbEG7nGwxhK6MMSLG" version="13.7.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-09-30T03:33:59.367Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="X2NAtb5-Kqrpv_BhNKX3" version="13.7.6" type="github" pages="3">
   <diagram id="lwbvN2cVMPfnyAF2uuGC" name="多线程基本操作">
     <mxGraphModel dx="2036" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -70,6 +70,26 @@
       <root>
         <mxCell id="LCmzGK2refkczmDkeLQ6-0" />
         <mxCell id="LCmzGK2refkczmDkeLQ6-1" parent="LCmzGK2refkczmDkeLQ6-0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="CqpM-8gk1tVS8i8IEDTG" name="AQS">
+    <mxGraphModel dx="1209" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="6CqS2saFudonESlGeZyy-0" />
+        <mxCell id="6CqS2saFudonESlGeZyy-1" parent="6CqS2saFudonESlGeZyy-0" />
+        <mxCell id="6CqS2saFudonESlGeZyy-2" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; color: rgb(77 , 77 , 77) ; font-size: 18px&quot;&gt;AQS：AbstractQuenedSynchronizer抽象的队列式同步器。是除了java自带的synchronized关键字之外的锁机制。&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;在juc包下lock下&lt;/div&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6CqS2saFudonESlGeZyy-1">
+          <mxGeometry y="35" width="910" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6CqS2saFudonESlGeZyy-3" value="&lt;span style=&quot;box-sizing: border-box ; outline: 0px ; font-weight: 700 ; overflow-wrap: break-word ; color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;AQS的核心思想&lt;/span&gt;&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并将共享资源设置为锁定状态，&lt;br&gt;如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，&lt;br&gt;这个机制AQS是用CLH队列锁实现的，即将&lt;b&gt;暂时获取不到锁的线程加入到队列中&lt;/b&gt;。&lt;/span&gt;&lt;br style=&quot;box-sizing: border-box ; outline: 0px ; overflow-wrap: break-word ; color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;CLH（Craig，Landin，and Hagersten）队列是一个虚拟的双向队列，虚拟的双向队列即不存在队列实例，仅存在节点之间的关联关系。&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6CqS2saFudonESlGeZyy-1">
+          <mxGeometry x="10" y="130" width="1090" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6CqS2saFudonESlGeZyy-4" value="&lt;span style=&quot;box-sizing: border-box ; outline: 0px ; font-weight: 700 ; overflow-wrap: break-word ; color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;AQS是将每一条请求共享资源的线程封装成一个CLH锁队列的一个结点（Node），来实现锁的分配。&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6CqS2saFudonESlGeZyy-1">
+          <mxGeometry y="250" width="820" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6CqS2saFudonESlGeZyy-5" value="&lt;span style=&quot;color: rgb(77 , 77 , 77) ; font-family: , &amp;#34;sf ui text&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;pingfang sc&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;wenquanyi micro hei&amp;#34; , sans-serif ; font-size: 18px ; background-color: rgb(255 , 255 , 255)&quot;&gt;AQS就是基于CLH队列，用volatile修饰共享变量state，线程通过CAS去改变状态符，通过自旋的方法去获取锁&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6CqS2saFudonESlGeZyy-1">
+          <mxGeometry y="320" width="890" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
