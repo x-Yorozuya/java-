@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-30T03:13:59.945Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="-rQhB5X8gMywzMOY4PRC" version="13.7.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-09-30T03:14:23.901Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="WfxjtOq2LoNQ_PSKObAG" version="13.7.6" type="github" pages="2">
   <diagram id="lwbvN2cVMPfnyAF2uuGC" name="多线程基本操作">
     <mxGraphModel dx="2036" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -43,6 +43,9 @@
         </mxCell>
         <mxCell id="Wj9j_xX5FXf46OD89LJR-7" value="&lt;img src=&quot;https://img2018.cnblogs.com/i-beta/1628307/202001/1628307-20200105153848315-1839616740.png&quot;&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="Wj9j_xX5FXf46OD89LJR-5">
           <mxGeometry x="10" y="160" width="720" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Wj9j_xX5FXf46OD89LJR-8" value="&lt;span style=&quot;color: rgb(94 , 94 , 94) ; font-family: &amp;#34;pingfang sc&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 13px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Mark Word的大小在32位虚拟机中占32个字节，在64位的虚拟机中占64个字节&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="Wj9j_xX5FXf46OD89LJR-1">
+          <mxGeometry x="380" y="180" width="470" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
